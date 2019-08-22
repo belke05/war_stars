@@ -205,6 +205,9 @@ function animate() {
   ctx.font = "30px Arial";
   ctx.fillText(`score: ${frames / 5}`, 10, 30);
   if (crash) {
+    let delt = document.querySelector("audio");
+    let m = delt.parentElement;
+    m.removeChild(delt);
     clearInterval(intervalID);
     ctx.clearRect(0, 0, cvWidth, cvHeight);
     title.draw();
